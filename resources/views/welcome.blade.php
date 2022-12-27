@@ -1,15 +1,12 @@
-
-
 @extends('layouts.site')
 @section('content')
-
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="assets/site/img/logo/loder.png" alt="">
                 </div>
             </div>
         </div>
@@ -25,7 +22,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/site/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -34,7 +31,7 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li class="active" ><a href="index.html">Home</a></li>
+                                                <li class="active" ><a href="index.html">Dashboard</a></li>
                                                 <li><a href="courses.html">Courses</a></li>
                                                 <li><a href="about.html">About</a></li>
                                                 <li><a href="#">Blog</a>
@@ -47,7 +44,7 @@
                                                 <li><a href="contact.html">Contact</a></li>
                                                 <!-- Button -->
                                                 <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
-                                                <li class="button-header"><a href="login.html" class="btn btn3">Log in</a></li>
+                                                <li class="button-header"><a href={{route('login')}} class="btn btn3">Log in</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -91,7 +88,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="">
+                                <img src="assets/site/img/icon/icon1.svg" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>60+ UX courses</h3>
@@ -102,7 +99,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="">
+                                <img src="assets/site/img/icon/icon2.svg" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>Expert instructors</h3>
@@ -113,7 +110,7 @@
                     <div class="col-lg-4 col-md-6 col-sm-8">
                         <div class="single-services mb-30">
                             <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="">
+                                <img src="assets/site/img/icon/icon3.svg" alt="">
                             </div>
                             <div class="features-caption">
                                 <h3>Life time access</h3>
@@ -139,7 +136,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured1.png" alt=""></a>
+                                <a href="#"><img src="assets/site/img/gallery/featured1.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -172,7 +169,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
+                                <a href="#"><img src="assets/site/img/gallery/featured2.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -203,7 +200,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured3.png" alt=""></a>
+                                <a href="#"><img src="assets/site/img/gallery/featured3.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -236,7 +233,7 @@
                     <div class="properties pb-20">
                         <div class="properties__card">
                             <div class="properties__img overlay1">
-                                <a href="#"><img src="assets/img/gallery/featured2.png" alt=""></a>
+                                <a href="#"><img src="assets/site/img/gallery/featured2.png" alt=""></a>
                             </div>
                             <div class="properties__caption">
                                 <p>User Experience</p>
@@ -274,7 +271,7 @@
             <div class="support-wrapper align-items-center">
                 <div class="left-content1">
                     <div class="about-icon">
-                        <img src="assets/img/icon/about.svg" alt="">
+                        <img src="assets/site/img/icon/about.svg" alt="">
                     </div>
                     <!-- section tittle -->
                     <div class="section-tittle section-tittle2 mb-55">
@@ -287,7 +284,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Techniques to engage effectively with vulnerable children and young people.</p>
@@ -295,7 +292,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world  learning together.</p>
@@ -304,7 +301,7 @@
 
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world learning together. Online learning is as easy and natural.</p>
@@ -314,7 +311,7 @@
                 <div class="right-content1">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about.png" alt="">
+                        <img src="assets/site/img/gallery/about.png" alt="">
 
                         <div class="video-icon" >
                             <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i class="fas fa-play"></i></a>
@@ -338,7 +335,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic1.png" alt="">
+                                <img src="assets/site/img/gallery/topic1.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -350,7 +347,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic2.png" alt="">
+                                <img src="assets/site/img/gallery/topic2.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -362,7 +359,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic3.png" alt="">
+                                <img src="assets/site/img/gallery/topic3.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -374,7 +371,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic4.png" alt="">
+                                <img src="assets/site/img/gallery/topic4.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -386,7 +383,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic5.png" alt="">
+                                <img src="assets/site/img/gallery/topic5.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -398,7 +395,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic6.png" alt="">
+                                <img src="assets/site/img/gallery/topic6.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -410,7 +407,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic7.png" alt="">
+                                <img src="assets/site/img/gallery/topic7.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -422,7 +419,7 @@
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="single-topic text-center mb-30">
                             <div class="topic-img">
-                                <img src="assets/img/gallery/topic8.png" alt="">
+                                <img src="assets/site/img/gallery/topic8.png" alt="">
                                 <div class="topic-content-box">
                                     <div class="topic-content">
                                         <h3><a href="#">Programing</a></h3>
@@ -448,7 +445,7 @@
                 <div class="right-content3">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about3.png" alt="">
+                        <img src="assets/site/img/gallery/about3.png" alt="">
                     </div>
                 </div>
                 <div class="left-content3">
@@ -460,7 +457,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Techniques to engage effectively with vulnerable children and young people.</p>
@@ -468,7 +465,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world
@@ -477,7 +474,7 @@
                     </div>
                     <div class="single-features">
                         <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
+                            <img src="assets/site/img/icon/right-icon.svg" alt="">
                         </div>
                         <div class="features-caption">
                             <p>Join millions of people from around the world learning together.
@@ -501,7 +498,7 @@
                 <div class="team-active">
                     <div class="single-cat text-center">
                         <div class="cat-icon">
-                            <img src="assets/img/gallery/team1.png" alt="">
+                            <img src="assets/site/img/gallery/team1.png" alt="">
                         </div>
                         <div class="cat-cap">
                             <h5><a href="services.html">Mr. Urela</a></h5>
@@ -510,7 +507,7 @@
                     </div>
                     <div class="single-cat text-center">
                         <div class="cat-icon">
-                            <img src="assets/img/gallery/team2.png" alt="">
+                            <img src="assets/site/img/gallery/team2.png" alt="">
                         </div>
                         <div class="cat-cap">
                             <h5><a href="services.html">Mr. Uttom</a></h5>
@@ -519,7 +516,7 @@
                     </div>
                     <div class="single-cat text-center">
                         <div class="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="">
+                            <img src="assets/site/img/gallery/team3.png" alt="">
                         </div>
                         <div class="cat-cap">
                             <h5><a href="services.html">Mr. Shakil</a></h5>
@@ -528,7 +525,7 @@
                     </div>
                     <div class="single-cat text-center">
                         <div class="cat-icon">
-                            <img src="assets/img/gallery/team4.png" alt="">
+                            <img src="assets/site/img/gallery/team4.png" alt="">
                         </div>
                         <div class="cat-cap">
                             <h5><a href="services.html">Mr. Arafat</a></h5>
@@ -537,7 +534,7 @@
                     </div>
                     <div class="single-cat text-center">
                         <div class="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="">
+                            <img src="assets/site/img/gallery/team3.png" alt="">
                         </div>
                         <div class="cat-cap">
                             <h5><a href="services.html">Mr. saiful</a></h5>
@@ -554,7 +551,7 @@
                 <div class="right-content2">
                     <!-- img -->
                     <div class="right-img">
-                        <img src="assets/img/gallery/about2.png" alt="">
+                        <img src="assets/site/img/gallery/about2.png" alt="">
                     </div>
                 </div>
                 <div class="left-content2">
@@ -585,7 +582,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo mb-25">
-                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                    <a href="index.html"><img src="assets/site/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">
