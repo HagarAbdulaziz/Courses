@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Admin\CoursesController;
+use App\Http\Controllers\ChatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\OurClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,11 +17,14 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/',[HomeController::class,"home"]);
-Route::get('/redirects',[HomeController::class,"index"]);
-////////////////////admin/////////////////////////////////////
-Route::group(['middleware'=>'auth:sanctum'],function(){
+Route::get('/redirects',[HomeController::class,"index"])->name('admin.dashboard');
+Route::get('/chatuser',[ChatController::class,"chatuser"])->name('chatuser');
 
-Route::group(['prefix' => 'courses'], function () {
+Route::get('/contact',[ChatController::class,"contact"])->name('Contact');
+Route::post('/contact/go',[ChatController::class,'contactstore'])->name('contactstore');
+////////////////////admin/////////////////////////////////////
+Route::group(['middleware'=>'AdminMiddeware'],function(){
+Route::group(['prefix' => 'course'], function () {
     Route::get('/', [CoursesController::class,'index']);
     Route::get('create', [CoursesController::class,'create'])->name('admin.courses.create');
   Route::post('store',[CoursesController::class,'store'])->name('admin.courses.store');
@@ -27,6 +32,16 @@ Route::group(['prefix' => 'courses'], function () {
     Route::post('update/{id}', [CoursesController::class,'update'])->name('admin.courses.update');
     Route::get('delete/{id}', [CoursesController::class,'delete'])->name('admin.courses.delete');
 });
+    Route::group(['prefix' => 'clients'], function () {
+        Route::resource('clients','\App\Http\Controllers\Admin\OurClientController');
+        Route::get('deleteimage/{id}', [OurClientController::class, 'deleteimage'])->name('clients.delete');
+    });
+    Route::group(['prefix' => 'chat'], function () {
+        Route::resource('chat','\App\Http\Controllers\ChatController');
+
+        Route::get('deleteimage/{id}', [OurClientController::class, 'deleteimage'])->name('clients.delete');
+    });
+
 });
 Route::middleware([
     'auth:sanctum',

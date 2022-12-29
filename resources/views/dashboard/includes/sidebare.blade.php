@@ -10,19 +10,14 @@
 
                 <li class="nav-item"  ><a href=""><i
                                           class="la la-group"></i>
-                                   <span class="menu-title" data-i18n="nav.dash.main">Categories </span>
+                                   <span class="menu-title" data-i18n="nav.dash.main">Chat</span>
                                    <span class="badge badge badge-danger badge-pill float-right mr-2">
                                           </span>
                             </a>
                             <ul class="menu-content">
                                    <li class=""><a
-                                                 class="menu-item" href=""
-                                                 data-i18n="nav.dash.ecommerce">All Categories </a>
-                                   </li>
-                                   <li class=""><a
-                                                 class="menu-item" href=""
-                                                 data-i18n="nav.dash.crypto">Add New Category
-                                                  </a>
+                                                 class="menu-item" href="{{route('chat.index')}}"
+                                                 data-i18n="nav.dash.ecommerce">Chat </a>
                                    </li>
                             </ul>
                      </li>
@@ -66,18 +61,18 @@
 </li>
 <li class="nav-item"  ><a href=""><i
        class="la la-group"></i>
-<span class="menu-title" data-i18n="nav.dash.main">Sizes </span>
+<span class="menu-title" data-i18n="nav.dash.main">Our Clients </span>
 <span class="badge badge badge-danger badge-pill float-right mr-2">
        </span>
 </a>
 <ul class="menu-content">
 <li class=""><a
-              class="menu-item" href=""
-              data-i18n="nav.dash.ecommerce">All Sizes </a>
+              class="menu-item" href="{{route('clients.index')}}"
+              data-i18n="nav.dash.ecommerce">Our Clients </a>
 </li>
 <li class=""><a
-              class="menu-item" href=""
-              data-i18n="nav.dash.crypto">Add New Size
+              class="menu-item" href="{{route('clients.create')}}"
+              data-i18n="nav.dash.crypto">Add New Client
                </a>
 </li>
 </ul>

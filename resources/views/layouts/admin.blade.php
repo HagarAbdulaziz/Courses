@@ -56,6 +56,7 @@
     <!-- END Page Level CSS-->
     <!-- BEGIN Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('assets/admin/css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
     <!-- END Custom CSS-->
 
     @yield('style')
@@ -65,6 +66,7 @@
             font-family: 'Cairo', sans-serif;
         }
     </style>
+    @livewireStyles
 </head>
 <body class="vertical-layout vertical-menu 2-columns menu-expanded fixed-navbar"
       data-open="click" data-menu="vertical-menu" data-col="2-columns">
@@ -78,7 +80,7 @@
 
 <!-- end sidebar -->
 @yield('content')
-
+@livewireScripts
 <!-- begin footer html -->
 @include('dashboard.includes.footer')
 
@@ -204,6 +206,7 @@
     $('#meridians14').timeDropper({
         meridians: true, setCurrentTime: false
     });
+
 </script>
 @yield('script')
 </body>

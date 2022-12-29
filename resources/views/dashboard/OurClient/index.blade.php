@@ -5,13 +5,13 @@
         <div class="content-wrapper">
             <div class="content-header row">
                 <div class="content-header-left col-md-6 col-12 mb-2">
-                    <h3 class="content-header-title"> Banners </h3>
+                    <h3 class="content-header-title"> Our Clients </h3>
                     <div class="row breadcrumbs-top">
                         <div class="breadcrumb-wrapper col-12">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="{{route('admin.dashboard')}}">Dahboard</a>
                                 </li>
-                                <li class="breadcrumb-item active"> Banners
+                                <li class="breadcrumb-item active"> Our Clients
                                 </li>
                             </ol>
                         </div>
@@ -25,7 +25,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">All Banners</h4>
+                                    <h4 class="card-title">All Clients</h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -47,33 +47,32 @@
                                             class="table display nowrap table-striped table-bordered scroll-horizontal">
                                             <thead class="">
                                             <tr>
-                                                
+
                                                 <th>Image</th>
-                                               
+
                                                  <th>Actions</th>
-                                                
+
                                             </tr>
                                             </thead>
                                             <tbody>
 
-                                           
-                                         @foreach ($banners as $banner)
+
+                                         @foreach ($clients as $client)
                                                  <tr>
                                      <td>
-                                                    <img style="width:40px;" src="{{ asset('images/banners/'.$banner->banner) }}"/>
-                                          
-                                     </td> 
+                                                    <img style="width:40px;" src="{{ asset('image_clientFolder/'.$client->image) }}"/>
+
+                                     </td>
                                          <td>
                                           <div class="btn-group" role="group" aria-label="Basic example">
-                                        
-                                          <a href="{{route('admin.banners.delete',$banner->id)}}"
+
+                                          <a href="{{route('clients.delete',$client->id)}}"
                                            class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
                         </div>
                     </td>
-                    
                   </tr>
                   @endforeach
-                                        
+
 
 
                                             </tbody>
@@ -86,6 +85,7 @@
                             </div>
                         </div>
                     </div>
+                    {!! $clients->appends(\Request::except('page'))->render() !!}
                 </section>
             </div>
         </div>

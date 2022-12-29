@@ -43,7 +43,7 @@
                                                 </li>
                                                 <li><a href="contact.html">Contact</a></li>
                                                 <!-- Button -->
-                                                <li class="button-header margin-left "><a href="#" class="btn">Join</a></li>
+                                                <li class="button-header margin-left "><a href="{{route('register')}}" class="btn">Chat</a></li>
                                                 <li class="button-header"><a href={{route('login')}} class="btn btn3">Log in</a></li>
                                             </ul>
                                         </nav>

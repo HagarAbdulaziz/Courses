@@ -12,9 +12,9 @@
                                 <li class="breadcrumb-item"><a href="">Dashboard</a>
                                 </li>
                                 <li class="breadcrumb-item"><a href="">
-                                        Banner</a>
+                                        Clients</a>
                                 </li>
-                                <li class="breadcrumb-item active"> Add New Banner
+                                <li class="breadcrumb-item active"> Clients
                                 </li>
                             </ol>
                         </div>
@@ -45,7 +45,7 @@
                                 <div class="card-content collapse show">
                                     <div class="card-body">
                                         <form class="form"
-                                              action="{{route('admin.banners.store')}}"
+                                              action="{{route('clients.store')}}"
                                               method="POST"
                                               enctype="multipart/form-data">
                                             @csrf
@@ -54,17 +54,14 @@
 
                                           <div class="form-body">
 
-                                                <h4 class="form-section"><i class="ft-home"></i> Add New Banner </h4>
-                                               
-
-                                            
+                                                <h4 class="form-section"><i class="ft-home"></i> Add New Image </h4>
                                                         <div class="row">
-                                                           
+
                                                           <div class="col-md-12">
                                                         <div class="form-group">
                                                         <label>Images</label>
-                                                      <input type="file" 
-                                                 name="banner" class="form-control">
+                                                      <input type="file"
+                                                 name="image" class="form-control">
                                                         </div>
                                                         </div>
                                                         </div>
@@ -79,7 +76,7 @@
                                             </div>
                                             </div>
                                         </form>
-                                            
+
 
 
                                     </div>

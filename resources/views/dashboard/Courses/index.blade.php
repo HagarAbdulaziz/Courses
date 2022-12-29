@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.admin')
 @section('content')
 
@@ -51,31 +48,39 @@
                                             <thead class="">
                                             <tr>
 
-                                                <th>Arabic Name</th>
-                                                <th>English Name</th>
-                                                 <th>Actions</th>
+
+                                                <th> Name</th>
+                                                <th scope="col"> description </th>
+                                                <th>Price</th>
+                                                <th>Duration</th>
+                                                <th>Instructor Name</th>
+                                                <th>Actions</th>
                                                 {{-- <th>الإجراءات</th>  --}}
                                             </tr>
                                             </thead>
                                             <tbody>
 
 
-                                         @foreach ($colors as $color)
-                                                 <tr>
+                                            @foreach ($courses as $course)
+                                                <tr>
 
-                                          <td>{{$color->name_ar}}</td>
-                                          <td>{{$color->name_en}}</td>
-                                         <td>
-                                          <div class="btn-group" role="group" aria-label="Basic example">
-                                         <a href="{{route('admin.colors.edit',$color->id)}}"
-                                          class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Update</a>
-                                          <a href="{{route('admin.colors.delete',$color->id)}}"
-                                           class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
-                        </div>
-                    </td>
+                                                    <td>{{$course->name_en}}</td>
+                                                    <td>{{$course->description_en}}</td>
 
-                  </tr>
-                  @endforeach
+                                                    <td>{{$course->price}}</td>
+                                                    <td>{{$course->duration_en}}</td>
+                                                    <td>{{$course->instructor_name_en}}</td>
+                                                    <td>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <a href="{{route('admin.courses.edit',$course->id)}}"
+                                                               class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Update</a>
+                                                            <a href="{{route('admin.courses.delete',$course->id)}}"
+                                                               class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                            @endforeach
 
 
 
