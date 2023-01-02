@@ -13,6 +13,9 @@
                         <h3 class="brand-text">Dashboard</h3>
                     </a>
                 </li>
+
+
+
                 <li class="nav-item d-md-none">
                     <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i
                             class="la la-ellipsis-v"></i></a>
@@ -32,14 +35,22 @@
                         <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                 <span class="mr-1">Hello
                   <span
-                      class="user-name text-bold-700">  {{auth()-> user() -> name}}</span>
+                      class="user-name text-bold-700">  {{Auth::user()->name}}</span>
                 </span>
                          </a>
                         <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href=""><i
                                     class="ft-user"></i> تعديل الملف الشحصي </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="{{route('logout')}}"><i class="ft-power"></i> تسجيل
-                                الخروج </a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a class="dropdown-item border-radius-md"  href="{{ route('logout') }}"
+                                                onclick="event.preventDefault();
+                                                this.closest('form').submit();"><i class="bx bx-log-out"></i>
+                                                <div class="d-flex flex-column justify-content-center">
+                                                    <span class="font-weight-bold">{{ __('Log Out') }}</span>
+                              </a>
+                            </form>
+                            {{-- <a class="dropdown-item border-radius-md" href="{{route('profile.show')}}"> --}}
                         </div>
                     </li>
 
