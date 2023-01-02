@@ -28,7 +28,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-header">
-                                    <h4 class="card-title">All Courses </h4>
+                                    <h4 class="card-title">All Services </h4>
                                     <a class="heading-elements-toggle"><i
                                             class="la la-ellipsis-v font-medium-3"></i></a>
                                     <div class="heading-elements">
@@ -54,9 +54,8 @@
 
                                                 <th> Name</th>
                                                 <th scope="col"> description </th>
-                                                <th>Price</th>
-                                                <th>Duration</th>
-                                                <th>Instructor Name</th>
+                                                <th>Icon</th>
+
                                                  <th>Actions</th>
                                                 {{-- <th>الإجراءات</th>  --}}
                                             </tr>
@@ -64,20 +63,21 @@
                                             <tbody>
 
 
-                                         @foreach ($courses as $course)
+                                         @foreach ($services as $service)
                                                  <tr>
 
-                                          <td>{{$course->name_en}}</td>
-                                          <td>{{$course->description_en}}</td>
+                                          <td>{{$service->name_en}}</td>
+                                          <td>{{$service->description_en}}</td>
+                                          <td>
+                                            <img style="width:40px;" src="{{ asset('images/icons/'.$service->icon) }}"/>
+                                          </td>
 
-                                          <td>{{$course->price}}</td>
-                                          <td>{{$course->duration_en}}</td>
-                                          <td>{{$course->instructor_name_en}}</td>
+
                                          <td>
                                           <div class="btn-group" role="group" aria-label="Basic example">
-                                         <a href="{{route('admin.courses.edit',$course->id)}}"
+                                         <a href="{{route('admin.services.edit',$service->id)}}"
                                           class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Update</a>
-                                          <a href="{{route('admin.courses.delete',$course->id)}}"
+                                          <a href="{{route('admin.services.delete',$service->id)}}"
                                            class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
                         </div>
                     </td>
