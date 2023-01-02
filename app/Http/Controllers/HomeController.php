@@ -23,7 +23,7 @@ class HomeController extends Controller
            //دي عشان اليوزر تايب وانت بتضيف خلي بالك عند التلاتة دول
          }
          else{
-          dd('user');
+             return view('chatuser');
          }
       }
 }
